@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gaurav A — Blog & Insights</title>
+  <meta name="description" content="Articles by Gaurav A on SEO, local search, and design.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#blog-main">Skip to content</a>
+  <header class="container header" role="banner">
+    <div class="brand">
+      <div class="logo"><img src="assets/profile.jpg" alt="Gaurav A"></div>
+      <div>
+        <div style="font-weight:800">Gaurav A</div>
+        <div class="small">SEO Specialist • GMB Expert • Graphic Designer</div>
+      </div>
+    </div>
+
+    <nav role="navigation">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+
+    <div class="controls">
+      <button class="ghost" data-theme-toggle aria-pressed="false">🌙</button>
+      <a class="btn" href="mailto:gauravgmbmanager@gmail.com">Contact</a>
+    </div>
+  </header>
+
+  <main id="blog-main" class="container">
+    <section style="margin-top:18px">
+      <h1>Writing</h1>
+      <p class="small">Notes and guides on SEO, Google My Business, and design.</p>
+
+      <div class="blog-list" aria-live="polite">
+        <!-- Post 1 -->
+        <article class="post" id="post-1">
+          <h3>Design Systems: building for scale</h3>
+          <div class="meta">Nov 4, 2025 • 6 min read</div>
+          <p class="small">Practical tips to make tokens and components work for small and large teams.</p>
+          <div class="excerpt-full" style="display:none">
+            <p>Design systems are the backbone of efficient product teams. In this article I cover token strategy, component APIs, versioning and documentation techniques that help your system scale without slowing product velocity.</p>
+            <h4>Key ideas</h4>
+            <ul>
+              <li>Start with tokens — colors, spacing, type scales.</li>
+              <li>Design components for composition.</li>
+              <li>Docs and examples > long specification pages.</li>
+            </ul>
+            <p>— Gaurav A</p>
+          </div>
+          <div style="margin-top:8px;display:flex;gap:8px;align-items:center;justify-content:flex-end">
+            <button class="ghost" data-post>Read more</button>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="post" id="post-2">
+          <h3>Frontend performance checklist</h3>
+          <div class="meta">Oct 15, 2025 • 8 min read</div>
+          <p class="small">A pragmatic checklist for shipping fast web experiences.</p>
+          <div class="excerpt-full" style="display:none">
+            <p>Performance is a product feature. This checklist walks through critical metrics and practical steps: optimizing images, serving critical CSS, code-splitting, and progressive hydration.</p>
+            <h4>Quick wins</h4>
+            <ul>
+              <li>Use modern image formats and lazy-loading.</li>
+              <li>Reduce JS payload and avoid large frameworks for small widgets.</li>
+              <li>Measure in production with real user metrics.</li>
+            </ul>
+            <p>— Gaurav A</p>
+          </div>
+          <div style="margin-top:8px;display:flex;gap:8px;align-items:center;justify-content:flex-end">
+            <button class="ghost" data-post>Read more</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer style="margin-top:36px">
+      <div class="small">© <span id="year-blog"></span> Gaurav A — Notes</div>
+    </footer>
+  </main>
+
+  <!-- Blog modal (Read more) -->
+  <div id="blog-modal" class="modal" aria-hidden="true" role="dialog" aria-label="Blog post">
+    <div class="frame" role="document" style="position:relative">
+      <button id="blog-close" class="btn" style="float:right;margin:-6px -6px 8px 0">Close</button>
+      <div id="blog-frame"></div>
+    </div>
+  </div>
+
+  <!-- shared lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+    <div class="frame" role="document" style="position:relative">
+      <button id="lb-close" class="btn" style="float:right;margin:-6px -6px 8px 0">Close</button>
+      <div id="lb-content"></div>
+    </div>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script>document.getElementById('year-blog').textContent = new Date().getFullYear();</script>
+</body>
+</html>
